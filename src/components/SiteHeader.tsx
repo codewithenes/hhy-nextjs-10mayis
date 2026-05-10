@@ -301,9 +301,19 @@ export function SiteHeader() {
       <div className={`lg:hidden fixed inset-0 z-40 transition-all duration-500 ${open ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}>
         {/* Backdrop */}
-        <div className="absolute inset-0 bg-[var(--color-hhy-dark)]/95" onClick={() => setOpen(false)} />
+        <div className="absolute inset-0 bg-[var(--color-hhy-dark)]/98 backdrop-blur-xl" onClick={() => setOpen(false)} />
 
         <nav className="relative z-10 h-full overflow-y-auto pt-24 pb-8 px-6" aria-label="Mobile navigation">
+          {/* Close Button Inside Menu */}
+          <button 
+            onClick={() => setOpen(false)}
+            className="absolute top-6 right-6 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-all"
+            aria-label="Close menu"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
           <div className="space-y-1">
             {NAV_KEYS.map((item) => {
               const label = t.nav[item.labelKey as keyof typeof t.nav];
