@@ -11,7 +11,7 @@ import { translations, Language } from "@/translations";
 
 const PARTNERS = [
   { name: "Callebaut", logo: "/images/logos/partners/callebaut-chocolate-oem-private-label.png" },
-  { name: "Tarim Kredi", logo: "/images/logos/partners/tarim-kredi-logo.png", scale: "scale-[1.4]" },
+  { name: "Tarim Kredi", logo: "/images/logos/partners/tarim-kredi-logo.png", scale: "scale-[1.1] md:scale-[1.4]" },
   { name: "Carrefour", logo: "/images/logos/partners/carrefour-logo.svg" },
   { name: "Migros", logo: "/images/logos/partners/migros-logo.jpg" },
   { name: "Lidl", logo: "/images/logos/partners/lidl-logo.webp" },
