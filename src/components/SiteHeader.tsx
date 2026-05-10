@@ -81,6 +81,13 @@ export function SiteHeader() {
     window.location.href = newPath;
   };
 
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (pathname === "/" || pathname === "/tr") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header
       ref={headerRef}
@@ -92,7 +99,12 @@ export function SiteHeader() {
     >
       <div className="container-screen flex items-center justify-between h-18 md:h-20">
         {/* Logo */}
-        <Link href={getLocalizedHref("/")} className="flex items-center gap-3 group relative z-10" aria-label="HHY Group Home">
+        <Link 
+          href={getLocalizedHref("/")} 
+          onClick={handleLogoClick}
+          className="flex items-center gap-3 group relative z-10" 
+          aria-label="HHY Group Home"
+        >
           <div className={`transition-all duration-500 ${isScrolled ? "brightness-0" : ""}`}>
             <Image 
               src="/images/hhy-logo-w.png" 

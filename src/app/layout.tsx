@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { JsonLd, organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/components/JsonLd";
 
 const inter = Inter({
@@ -115,6 +116,7 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
+          <ScrollToTop />
         </div>
       </body>
     </html>
