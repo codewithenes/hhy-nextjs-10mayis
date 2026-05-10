@@ -130,7 +130,7 @@ export default function HomePageClient({ lang }: { lang: Language }) {
       {/* ═══ HERO (IMAGE BASED) ═══ */}
       <section className="relative max-md:h-auto max-md:min-h-[max(70dvh,460px)] md:h-[80vh] md:min-h-[720px] flex items-start md:items-center overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/hero-facility.jpg" alt={t.home.heroTitle + " " + t.home.heroTitleAccent} fill priority className="w-full h-full object-cover scale-105 animate-[zoomOut_20s_linear_infinite]" />
+          <Image src="/images/hero-facility.jpg" alt={t.home.heroTitle + " " + t.home.heroTitleAccent} fill priority className="w-full h-full object-cover scale-105 animate-[zoomOut_20s_linear_forwards]" />
           <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-hhy-darker)]/90 via-[var(--color-hhy-dark)]/60 to-transparent" />
         </div>
 
